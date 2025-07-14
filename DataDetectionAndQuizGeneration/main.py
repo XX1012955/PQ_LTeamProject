@@ -18,6 +18,6 @@ while True:
     recognizeData=voiceFromP.read(4000)
     if voiceRecognizer.AcceptWaveform(recognizeData):
         outputResult=voiceRecognizer.Result()
-        file_path = "D:/PopQuizSystemInputDetection/microphone.txt"  # 根据需要修改路径
+        file_path = "C:/Users/86130/Desktop/111.txt"  # 根据需要修改路径
         with open(file_path, "a", encoding="utf-8") as file:
             file.write(json.loads(outputResult)['text'].replace(' ',''))
