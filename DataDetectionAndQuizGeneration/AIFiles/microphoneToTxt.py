@@ -3,7 +3,7 @@ import wave
 import pyaudio
 import json
 from openai import OpenAI
-voiceModel= Model('vosk-model-small-cn-0.22')
+voiceModel= Model('../vosk-model-small-cn-0.22')
 #实时语音识别
 p=pyaudio.PyAudio()#麦克风
 voiceFromP=p.open(
