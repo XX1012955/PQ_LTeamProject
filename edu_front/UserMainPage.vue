@@ -4,6 +4,7 @@
             <!-- 顶栏容器 -->
             <el-header id="elDaoHang">
                 <!--导航栏-->
+                <!-- 23213213 -->
                 <el-menu
                         id="dhBar"
                         :default-active="activeIndex"
@@ -219,13 +220,13 @@
                                     <span id="noticeCreateTime">{{ notice.formatDate }}</span>
                                 </div>
                                 <!-- 通知内容 -->
-                                <div class="medium" id="noticeContent" v-html="notice.content">{{ notice.content }}</div>
+                                <div class="medium" id="noticeContent" v-html="notice.content"></div>
                             </div>
                         </el-carousel-item>
                     </el-carousel>
                 </template>
             </el-main>
-
+              <!-- nothing to do -->
             <!-- 公告详情-抽屉 -->
             <notice-drawer v-model="noticeDrawer" :notice="noticeDrawerContent"></notice-drawer>
 
