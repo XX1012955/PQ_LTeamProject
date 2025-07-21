@@ -1,19 +1,19 @@
 <template>
-    <div>
-
+    <div class="login-bg">
+    <div class="login-container">
         <el-container>
             <!-- 侧边图-->
-            <el-aside width="300px">
+            <el-aside width="300px" class="login-side">
                 <img id="shape" src="imgs/login/shape.png" alt="Logo">
             </el-aside>
             <!-- 主空间 -->
-            <el-main id="elMain">
+            <el-main id="elMain" class="login-card">
                 <!-- logo -->
-                <div id="logo">
+                <div id="logo" class="login-logo">
                     <router-link :to="{name:'MainPage'}"><el-image src="imgs/login/logo.png" id="logoImg" :fit="'scale-down'" alt="Logo"></el-image></router-link>
                 </div>
                 <!-- info -->
-                <div id="info">
+                <div id="info" class="login-info">
                     <!-- 介绍 -->
                     <div class="information">欢迎登录</div>
                     <!-- <div class="information">名师免费教学</div>
@@ -25,7 +25,7 @@
                     <router-link class="register" :to="{name:'Register'}">点我注册</router-link>
                     <!-- 新增管理员按钮 -->
                     <div style="visibility: hidden">占行</div>
-                    <el-button @click="goToAdminLogin" style="margin-top: 10px;">管理员登录</el-button>
+                    <el-button @click="goToAdminLogin" class="admin-btn" style="margin-top: 10px;">管理员登录</el-button>
                     
                 </div>
                 <!-- center -->
@@ -38,21 +38,21 @@
                 <div id="form-title"> {{pageTitle[type]}}</div>
                 <!-- form表单 -->
                 <div id="form">
-                    <el-form ref="form" :model="form" label-width="80px">
+                    <el-form ref="form" :model="form" label-width="80px" class="login-form">
                         <el-form-item> <!-- 账号 长度限制24 自带清除 -->
                             <el-input class="input" v-model="form.id" placeholder="用户ID" maxlength="24" clearable></el-input>
                         </el-form-item>
                         <el-form-item> <!-- 密码 自带显示密码 -->
                             <el-input class="input" v-model="form.psw" placeholder="密码" maxlength="24" clearable show-password></el-input>
                         </el-form-item>
-                        <el-form-item> <!-- 验证码 -->
+                        <el-form-item class="verify-row"> <!-- 验证码 -->
                             <el-input id="verifyCodeBox" class="input" v-model="form.verifyCode" maxlength="4" placeholder="验证码"></el-input>
                         </el-form-item>
                         <el-form-item> <!-- 忘记密码 -->
-                            <router-link id="forgotPsw-sy" :to="{name:'ForgetPsw'}">忘记密码？</router-link>
+                            <router-link id="forgotPsw-sy" :to="{name:'ForgetPsw'}" >忘记密码？</router-link>
                         </el-form-item>
                         <el-form-item>  <!-- 登陆确认按钮 -->
-                            <el-button type="primary" @click="onSubmit" id="confirm"><span id="btLogin">登录</span></el-button>
+                            <el-button type="primary" @click="onSubmit" id="confirm" class="login-btn"><span id="btLogin">登录</span></el-button>
                         </el-form-item>
                         
 
@@ -64,12 +64,13 @@
                 </div>
                 <!-- 验证码图片单独定位 -->
                 <div id="verifyCode" v-show="verifyCodeShow">
-                    <img src="/checkCodeServlet" id="verifyCodeImg" @click="changeVerifyImg" alt="图片下班了~">  <!-- 验证码图片 -->
+                    <img src="/checkCodeServlet" id="verifyCodeImg" @click="changeVerifyImg" class="verify-img" alt="图片下班了~">  <!-- 验证码图片 -->
                 </div>
 
             </el-main>
         </el-container>
 
+    </div>
     </div>
 
 </template>
@@ -171,13 +172,84 @@
             },
             // 跳转到管理员登录页面（在新标签页打开）
             goToAdminLogin() {
-                window.open("http://localhost:81/#/Login?type=123", '_blank');
+                window.open("http://localhost/#/Login?type=123", '_blank');
             }
         }
     }
 </script>
 
 <style scoped>
+    /* 背景 */
+    .login-bg {
+    min-height: 100vh;
+     background: linear-gradient(120deg, #e0eafc 0%, #cfdef3 100%);
+     justify-content: center;
+    }
+
+    主容器
+    .login-container {
+    display: flex;
+    background: none;
+    box-shadow: none;
+    border-radius: 16px;
+    overflow: hidden;
+    width: 900px;
+    max-width: 95vw;
+    }
+
+    /* 右侧卡片 */
+    .login-card {
+    background: #ffffff;
+    padding: 48px 40px 32px 40px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 0 16px 16px 0;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+    }
+
+    /* logo */
+    .login-logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+    }
+
+    /* 欢迎信息 */
+    .login-info {
+    text-align: center;
+    margin-bottom: 24px;
+    }
+
+    .admin-btn {
+    font-size: 14px;
+    color: #888;
+    margin-top: 4px;
+    }
+
+    .login-form {
+    margin-top: 8px;
+    }
+    .login-form .el-form-item {
+    margin-bottom: 18px;
+    }
+
+    .login-btn {
+    width: 100%;
+    height: 44px;
+    font-size: 18px;
+    border-radius: 8px;
+    background: #00ce23;
+    border: none;
+    }
+    .login-btn:hover {
+    background: #02b521;
+    }
+
+    .verify-row {
+    align-items: center;
+    }
     /* 侧边图 */
     #shape {
         height: 97.7vh;
@@ -192,7 +264,7 @@
 
     /* Logo */
     #logo {
-        top: 15%;
+        top: 8%; /* 原来是15%，改成更小的值，logo会更靠上 */
         left: 1%;
         position: absolute;
     }
@@ -200,7 +272,18 @@
     ::v-deep #logoImg {
         width: 240px;
         height: 79px;
+        margin-top: -20px; /* 新增，向上移动20px，可根据实际效果调整数值 */
     }
+    
+    .verify-img {
+    width: 110px;
+    height: 40px;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 1px solid #eee;
+    margin-top: -65px; /* 新增，向上移动10px，可根据实际效果调整数值 */
+    }   
+
 
     /* info */
     #info {
@@ -295,14 +378,18 @@
 
     /* 忘记密码超链接 */
     #forgotPsw-sy {
-        left: 10px;
-        position: relative;
-        text-decoration: none;
-        font-size: 16px;
-        font-weight: 500;
-        color: #b5b7b4;
-        /* 文字间距 */
-        letter-spacing: 1px;
+    left: 10px;
+    position: relative;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: #b5b7b4;
+    /* 文字间距 */
+    letter-spacing: 1px;
+    margin-top: 10px;      /* 新增或调整，减小上边距 */
+    margin-bottom: 2px;   /* 新增或调整，减小下边距 */
+    padding-top: 0;       /* 如有需要，也可设置为0 */
+    padding-bottom: 0;    /* 如有需要，也可设置为0 */
     }
 
     /* 忘记密码悬浮 */
