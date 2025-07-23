@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9a773241-1440-404c-beca-3c9873ee4f0e" name="更改" comment="杂务文件" />
+    <list default="true" id="9a773241-1440-404c-beca-3c9873ee4f0e" name="更改" comment="上传txtToTxt.py文件，完成多源文本文件处理模块">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,6 +15,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="package.json" />
         <option value="Python Script" />
       </list>
     </option>
@@ -127,6 +130,9 @@
       <workItem from="1752583742585" duration="4704000" />
       <workItem from="1752679861155" duration="2260000" />
       <workItem from="1752758954962" duration="790000" />
+      <workItem from="1752944278778" duration="6217000" />
+      <workItem from="1753103983738" duration="239000" />
+      <workItem from="1753104261613" duration="2131000" />
     </task>
     <task id="LOCAL-00001" summary="这是一段测试文本。">
       <option name="closed" value="true" />
@@ -240,7 +246,23 @@
       <option name="project" value="LOCAL" />
       <updated>1752759035014</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="添加标准配置文件">
+      <option name="closed" value="true" />
+      <created>1752944387044</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1752944387044</updated>
+    </task>
+    <task id="LOCAL-00016" summary="上传txtToTxt.py文件，完成多源文本文件处理模块">
+      <option name="closed" value="true" />
+      <created>1753104087144</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1753104087144</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -265,7 +287,9 @@
     <MESSAGE value="新增PPTPictureToTxt.py用于视频帧的文字检测。" />
     <MESSAGE value="进行了模块的测试，并上传了测试文件" />
     <MESSAGE value="杂务文件" />
-    <option name="LAST_COMMIT_MESSAGE" value="杂务文件" />
+    <MESSAGE value="添加标准配置文件" />
+    <MESSAGE value="上传txtToTxt.py文件，完成多源文本文件处理模块" />
+    <option name="LAST_COMMIT_MESSAGE" value="上传txtToTxt.py文件，完成多源文本文件处理模块" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/PQ_LTeamProject$main.coverage" NAME="main 覆盖结果" MODIFIED="1752065036842" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DataDetectionAndQuizGeneration" />
