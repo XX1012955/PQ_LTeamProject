@@ -1,0 +1,18 @@
+{
+  "db": {
+    "host": "localhost",
+    "port": 3306,
+    "user": "root",
+    "password": "123456",
+    "database": "two hours"
+  },
+  "watchDir": "D:\\edu\\two_hours_front\\two_hours_front\\voicetotext\\Quiz",
+  "pythonPath": "python",
+  "pythonScript": "main.py",
+  "port": 3001,
+  "examValidDays": 7,
+  "defaultCourseId": 7,
+  "defaultAuthorId": "stu023",
+  "defaultExamType": 3,
+  "defaultQuestionScore": 5
+}
