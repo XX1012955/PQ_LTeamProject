@@ -41,13 +41,13 @@
 
 ## 📋 支持的文件类型
 
-| 类型       | 格式                                     | 处理方式     | 说明                    |
-| ---------- | ---------------------------------------- | ------------ | ----------------------- |
-| 📄 **文档** | `.txt`, `.doc`, `.docx`, `.ppt`, `.pptx` | 直接文本提取 | 支持Office文档和纯文本  |
-| 📑 **PDF**  | `.pdf`                                   | PyPDF2提取   | 自动提取PDF中的文字内容 |
-| 🖼️ **图片** | `.jpg`, `.jpeg`, `.png`                  | OCR识别      | 使用EasyOCR进行文字识别 |
-| 🎥 **视频** | `.mp4`, `.avi`, `.mov`, `.mkv`           | 内容提取     | 提取PPT内容和音频轨道   |
-| 🎵 **音频** | `.wav`                                   | 语音识别     | 使用Vosk进行语音转文字  |
+| 类型 | 格式 | 处理方式 | 说明 |
+|------|------|----------|------|
+| 📄 **文档** | `.txt`, `.doc`, `.docx`, `.ppt`, `.pptx` | 直接文本提取 | 支持Office文档和纯文本 |
+| 📑 **PDF** | `.pdf` | PyPDF2提取 | 自动提取PDF中的文字内容 |
+| 🖼️ **图片** | `.jpg`, `.jpeg`, `.png` | OCR识别 | 使用EasyOCR进行文字识别 |
+| 🎥 **视频** | `.mp4`, `.avi`, `.mov`, `.mkv` | 内容提取 | 提取PPT内容和音频轨道 |
+| 🎵 **音频** | `.wav` | 语音识别 | 使用Vosk进行语音转文字 |
 
 ## 🛠️ 环境要求
 
@@ -111,21 +111,21 @@ mysql -u root -p "two hours" < two_hours3.sql
 
 ### 配置项说明
 
-| 配置项                 | 说明             | 默认值             |
-| ---------------------- | ---------------- | ------------------ |
-| `db.host`              | 数据库主机地址   | localhost          |
-| `db.port`              | 数据库端口       | 3306               |
-| `db.user`              | 数据库用户名     | root               |
-| `db.password`          | 数据库密码       | 123456             |
-| `db.database`          | 数据库名称       | two hours          |
-| `watchDir`             | 文件监控目录     | ./voicetotext/Quiz |
-| `pythonPath`           | Python解释器路径 | python             |
-| `port`                 | API服务器端口    | 3001               |
-| `examValidDays`        | 考试有效期（天） | 7                  |
-| `defaultCourseId`      | 默认课程ID       | 7                  |
-| `defaultAuthorId`      | 默认作者ID       | stu023             |
-| `defaultExamType`      | 默认考试类型     | 3                  |
-| `defaultQuestionScore` | 默认题目分数     | 5                  |
+| 配置项 | 说明 | 默认值 |
+|--------|------|--------|
+| `db.host` | 数据库主机地址 | localhost |
+| `db.port` | 数据库端口 | 3306 |
+| `db.user` | 数据库用户名 | root |
+| `db.password` | 数据库密码 | 123456 |
+| `db.database` | 数据库名称 | two hours |
+| `watchDir` | 文件监控目录 | ./voicetotext/Quiz |
+| `pythonPath` | Python解释器路径 | python |
+| `port` | API服务器端口 | 3001 |
+| `examValidDays` | 考试有效期（天） | 7 |
+| `defaultCourseId` | 默认课程ID | 7 |
+| `defaultAuthorId` | 默认作者ID | stu023 |
+| `defaultExamType` | 默认考试类型 | 3 |
+| `defaultQuestionScore` | 默认题目分数 | 5 |
 
 ## 🚀 快速开始
 
@@ -415,15 +415,6 @@ module.exports = router;
 3. 验证后端API服务是否正常运行
 4. 查看浏览器控制台的错误信息
 
-## 🤝 贡献指南
-
-我们欢迎所有形式的贡献！请遵循以下步骤：
-
-1. **Fork** 本仓库
-2. 创建您的特性分支：`git checkout -b feature/AmazingFeature`
-3. 提交您的更改：`git commit -m 'Add some AmazingFeature'`
-4. 推送到分支：`git push origin feature/AmazingFeature`
-5. 打开一个 **Pull Request**
 
 ### 代码规范
 - 前端代码遵循Vue.js官方风格指南
